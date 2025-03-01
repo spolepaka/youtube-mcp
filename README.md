@@ -1,6 +1,6 @@
-# YouTube Search MCP Server
+# YouTube MCP Server (NO API REQUIRED)
 
-A Model Context Protocol (MCP) server that enables YouTube search, video info retrieval, and transcript extraction with no API keys required.
+A Model Context Protocol (MCP) server that enables YouTube search, video info retrieval, and transcript extraction with NO API KEYS required.
 
 ## Features
 
@@ -31,11 +31,20 @@ For Claude Desktop:
   "mcpServers": {
     "youtube-search": {
       "command": "node",
-      "args": ["/absolute/path/to/youtube-search/build/index.js"]
+      "args": ["/absolute/path/to/youtube-mcp/build/index.js"]
     }
   }
 }
 ```
+
+For Cursor:
+1. Go to Settings → MCP → Add a new MCP server
+2. Fill in the fields:
+   - Name: youtube
+   - Type: command
+   - Command: node /absolute/path/to/youtube-mcp/build/index.js
+   
+   (Replace with the absolute path to the index.js file on your system)
 
 Configuration file location:
 - Windows: `%APPDATA%\Claude\claude_desktop_config.json`
@@ -118,14 +127,6 @@ Example response:
 }
 ```
 
-## Testing
-
-You can test the server using the MCP Inspector:
-
-```bash
-npx -y @modelcontextprotocol/inspector node build/index.js
-```
-
 ## Limitations
 
 Since this tool uses web scraping of YouTube pages, there are some important limitations to be aware of:
@@ -180,3 +181,12 @@ The server provides clear error messages for common issues:
 ## Contributing
 
 Feel free to submit issues and enhancement requests!
+
+## Connect & Feedback
+
+Have questions, suggestions, or need help with this tool? Connect with me:
+
+- GitHub: [@spolepaka/youtube-mcp](https://github.com/spolepaka/youtube-mcp)
+- X (Twitter): [@skpolepaka](https://x.com/skpolepaka)
+
+Your feedback helps improve this tool for everyone!

@@ -391,3 +391,4 @@ const transport = new StdioServerTransport();
 await server.connect(transport);
 
 console.error('YouTube Search MCP Server running...'); 
+console.error('Questions or feedback? Connect with me: GitHub: @spolepaka/youtube-mcp | X: @skpolepaka'); 
