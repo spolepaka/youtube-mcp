@@ -25,30 +25,31 @@ A Model Context Protocol (MCP) server that enables YouTube search, video info re
    ```
 4. Add the server to your MCP configuration:
 
-For Claude Desktop:
-```json
-{
-  "mcpServers": {
-    "youtube-search": {
-      "command": "node",
-      "args": ["/absolute/path/to/youtube-mcp/build/index.js"]
+  For Claude Desktop:
+  ```json
+  {
+    "mcpServers": {
+      "youtube-search": {
+        "command": "node",
+        "args": ["/absolute/path/to/youtube-mcp/build/index.js"]
+      }
     }
   }
-}
-```
+  ```
+  (Replace with the absolute path to the index.js file on your system)
 
-For Cursor:
-1. Go to Settings → MCP → Add a new MCP server
-2. Fill in the fields:
-   - Name: youtube
-   - Type: command
-   - Command: node /absolute/path/to/youtube-mcp/build/index.js
-   
-   (Replace with the absolute path to the index.js file on your system)
+  Configuration file location:
+  - Windows: `%APPDATA%\Claude\claude_desktop_config.json`
+  - macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
 
-Configuration file location:
-- Windows: `%APPDATA%\Claude\claude_desktop_config.json`
-- macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
+  For Cursor:
+  1. Go to Settings → MCP → Add a new MCP server
+  2. Fill in the fields:
+    - Name: youtube
+    - Type: command
+    - Command: node /absolute/path/to/youtube-mcp/build/index.js
+    
+    (Replace with the absolute path to the index.js file on your system)
 
 ## Usage
 
